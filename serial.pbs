@@ -2,9 +2,6 @@
 #PBS -l walltime=00:05:00
 ##PBS -l advres=baqk
 
-module load cudatoolkit
-module load craype-accel-nvidia35
-
 cd $PBS_O_WORKDIR
 
 # Run the serial executable on the XK node with the output suppressed and a
