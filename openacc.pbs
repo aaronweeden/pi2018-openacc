@@ -7,4 +7,6 @@ module load craype-accel-nvidia35
 
 cd $PBS_O_WORKDIR
 
-aprun -n 1 ./diffusion-serial.exe -q -w 10000 -h 10000
+# Run the OpenACC executable on the XK node with the output suppressed and a
+# 10K by 10K world:
+aprun -n 1 ./diffusion-openacc.exe -q -w 10000 -h 10000
