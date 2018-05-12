@@ -1,0 +1,10 @@
+#PBS -l nodes=1:ppn=16:xk
+#PBS -l walltime=00:05:00
+##PBS -l advres=baqk
+
+module load cudatoolkit
+module load craype-accel-nvidia35
+
+cd $PBS_O_WORKDIR
+
+aprun -n 1 ./diffusion-serial.exe -q -w 10000 -h 10000
